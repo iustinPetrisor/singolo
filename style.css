@@ -7,3 +7,11 @@
 	margin: auto;
 	position: relative;
 }
+.slider {
+	height: 600px;
+
+}
+.wrapper-slider{
+	overflow: hidden;
+
+}
