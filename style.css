@@ -44,7 +44,34 @@ header.logo{
 	height: 600px;
 
 }
+
 .wrapper-slider{
 	overflow: hidden;
+	background-color: #f06c64;
 
+}
+.slide-content{
+	height: 600px;
+
+}
+.slide-content[data-number='1']{
+	
+}
+.absolute{
+	position: absolute;
+}
+.site-width .arrow{
+	position: absolute;
+	top: 240px;
+}
+.site-width .arrow--left{
+	left: 0;
+}
+.site-width .arrow--right{
+	right: 0;
+}
+.site-width .iphone-vertical{
+	position: absolute;
+	top: 53px;
+	left: 72px;
 }
