@@ -1,0 +1,9 @@
+*{
+	margin: 0;
+
+}
+.site-width{
+	width: 940px;
+	margin: auto;
+	position: relative;
+}
