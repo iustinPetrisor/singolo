@@ -1,12 +1,45 @@
 *{
 	margin: 0;
-
 }
+/* font-family: 'Lato', sans-serif; */
 .site-width{
 	width: 940px;
 	margin: auto;
 	position: relative;
 }
+
+header{
+	background-color:#2d303a;
+	border-bottom:5px solid #323746;
+	text-align:right;
+}
+header.logo{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.logo h1{
+	font-size:25px;
+	font-weight:700;
+	font-family: 'Lato', sans-serif;
+	color:#ffffff;
+	text-transform:uppercase;
+}
+.logo span{
+	color:#f06c64;
+}
+
+.header-nav a{
+	font-size:12px;
+	font-weight:700;
+	font-family:'Lato', sans-serif;
+	color:#ffffff;
+	text-transform:uppercase;
+}
+.header-nav a{
+	color:#f06c64;
+}
+
 .slider {
 	height: 600px;
 
