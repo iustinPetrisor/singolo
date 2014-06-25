@@ -4,10 +4,13 @@
 }
 /* font-family: 'Lato', sans-serif; */
 .site-width{
-	max-width: 940px;
+	max-width: 930px;
+	padding-left: 15px;
+	/* margin-left: 15px; */
+	padding-right: 15px;
 	margin: auto;
 	position: relative;
-	min-width: 300px;
+min-width: 300px;
 }
 
 header{
@@ -125,7 +128,6 @@ header{
 	margin-bottom: 30px;
 }
 .site-width .container{
-	margin-left: 20px;
 	margin-top: 20px;
 }
 .site-width .container:nth-child(3n){
@@ -135,6 +137,7 @@ header{
 	position: relative;
 	width: 300px;
 	height: 100px;
+	padding-right: 20px;
 	display: inline-block;
 }
 .container--title{
@@ -153,7 +156,7 @@ header{
 	font-weight: 500;
 	word-spacing: 5px;
 	line-height: 19px;
-	width: 220px;
+	width: 200px;
 }
 .container .container-description{
 	
