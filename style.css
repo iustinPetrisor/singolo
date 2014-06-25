@@ -4,11 +4,12 @@
 }
 /* font-family: 'Lato', sans-serif; */
 .site-width{
-	width: 940px;
+	max-width: 940px;
 	margin: auto;
 	position: relative;
+	min-width: 300px;
 }
-
+ 
 header{
 	background-color:#2d303a;
 	border-bottom:5px solid #323746;
@@ -92,8 +93,9 @@ header.logo{
 	left: 380px;
 }
 .services{
-	height: 500px;
+	
 	padding-top: 60px;
+	padding-bottom: 60px;
 }
 .title-services{
 	display: inline-block;
