@@ -4,6 +4,8 @@
 	<title>Singolo</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="slider.js"></script>
 </head>
 <body>
 	<header>
@@ -30,11 +32,13 @@
 					<img class="iphone-vertical" src="images/iphone-vertical.png">
 					<img class="iphone-horizontal" src="images/iphone-horizontal.png">
 				</div>
-				<div class="slide-content" data-number="2">
-					
+				<div class="slide-content" data-number="1">
+					<img class="iphone-vertical" src="images/iphone-vertical.png">
+					<img class="iphone-horizontal" src="images/iphone-horizontal.png">
 				</div>
-				<div class="slide-content" data-number="3">
-					
+				<div class="slide-content" data-number="1">
+					<img class="iphone-vertical" src="images/iphone-vertical.png">
+					<img class="iphone-horizontal" src="images/iphone-horizontal.png">
 				</div>
 			</div>
 		</div>
@@ -128,5 +132,15 @@
 				
 		</div>
 	</footer>
+	<script type="text/javascript">
+
+		sliderCarousel = new Slider($('div.banner'), $('div.nav'), $(window).width(), 1000, 2000, 1000);
+
+  			sliderCarousel.nav_bar.on('click', function() {
+  				console.log($(this).data('dir'));
+  	 		sliderCarousel.slide( $(this).data('dir'));
+  		})
+
+	</script>
 </body>
 </html>

@@ -4,15 +4,17 @@
 }
 /* font-family: 'Lato', sans-serif; */
 .site-width{
+	max-width: 960px;
+	margin: auto;
+	position: relative;
+	min-width: 300px;
+}
+.services .site-width{
 	max-width: 930px;
 	padding-left: 15px;
 	/* margin-left: 15px; */
 	padding-right: 15px;
-	margin: auto;
-	position: relative;
-min-width: 300px;
 }
-
 header{
 	position:relative;
 	height:90px;
@@ -74,6 +76,9 @@ header{
 }
 .absolute{
 	position: absolute;
+}
+.arrow{
+	cursor: pointer;
 }
 .site-width .arrow{
 	position: absolute;
@@ -203,4 +208,10 @@ footer a img:last-child{
 }
 footer a:hover img:last-child{
 	display: initial;
+}
+
+/* Pentru slider
+*/
+.slider .site-width{
+	overflow: hidden;
 }
