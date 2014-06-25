@@ -30,14 +30,8 @@
 				<div class="slider">
 					<div class="slide-content" data-number="1">
 						<img class="iphone-vertical" src="images/iphone-vertical.png">
-						<img class="iphone-horizontal" src="images/iphone-horizontal.png">
-					</div>
-					<div class="slide-content" data-number="1">
-						<img class="iphone-vertical" src="images/iphone-vertical.png">
-						<img class="iphone-horizontal" src="images/iphone-horizontal.png">
-					</div>
-					<div class="slide-content" data-number="1">
-						<img class="iphone-vertical" src="images/iphone-vertical.png">
+					</div><!--
+				--><div class="slide-content" data-number="1">
 						<img class="iphone-horizontal" src="images/iphone-horizontal.png">
 					</div>
 				</div>
@@ -142,8 +136,22 @@
 
   			sliderCarousel.nav_bar.on('click', function() {
   				console.log($(this).data('dir'));
-  	 		sliderCarousel.slide( $(this).data('dir'));
+  			var color = getRandColor();	
+  			$('.wrapper-slider').css('background-color', color);	
+  	 		sliderCarousel.slideTo( $(this).data('dir'));
+
   		})
+  		resize = function( img ) {
+		var widthImage = img.naturalWidth * $(window).width() / 960;
+		width = Math.min(widthImage, 350);
+		var height = width * 9 / 16;
+		img.css({width:width, height: height});
+		}
+
+		resize($('.slide-content img'));
+		$(window).on('resize', function () {
+			resize($('.slide-content img'));
+		} )	
 
 	</script>
 </body>

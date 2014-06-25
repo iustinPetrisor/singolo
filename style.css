@@ -70,16 +70,24 @@ header{
 
 .slider {
 	height: 600px;
-
+	text-align: center;
+	padding-top: 30px;
 }
 
-.wrapper-slider{
-	overflow: hidden;
+.wrapper-slider {
 	background-color: #f06c64;
+	transition: background-color 1s;
+}
+.wrapper-slider .site-width{
+
+	overflow: hidden;
+	max-width: 960px;
+	min-width: 350px;
 
 }
 .slide-content{
 	height: 600px;
+	display: inline-block;
 
 }
 .slide-content[data-number='1']{
@@ -101,26 +109,7 @@ header{
 .site-width .arrow--right{
 	right: 0;
 }
-.iphone-vertical{
-	box-shadow: 23px 17px 3px #CE5B57;
 
-	border-radius: 23px;
-}
-.site-width .iphone-vertical{
-	position: absolute;
-	top: 53px;
-	left: 72px;
-}
-.iphone-horizontal{
-	box-shadow: 23px 17px 3px #CE5B57;
-	
-	border-radius: 23px;
-}
-.site-width .iphone-horizontal{
-	position: absolute;
-	top: 175px;
-	left: 380px;
-}
 .services{
 	
 	padding-top: 60px;
