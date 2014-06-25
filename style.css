@@ -236,7 +236,141 @@ header{
 	display: initial;
 }
 
+.contact-main-content{
+	padding-top: 65px;
+	padding-bottom: 130px;
+	border-bottom: 6px solid #ea676b;
+	background-color: #f06c64;
+	color:#f0d8d9;
+}
+.contact-main-content h1{
+	font-size: 30px;
+	font-weight: normal;
+}
+.contact-main-content p{
+	font-size: 18px;
+	margin-top: 30px;
+}
 
+.contact-form{
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 50px;
+	
+}
+
+.contact-input{
+	width: 620px;
+	height: 35px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	border: 0;
+	padding-left: 15px;
+	background-color: #d6564f;
+	color:#f0d8d9;
+	outline: none;
+}
+.contact-textarea{
+	width: 620px;
+	height:200px;
+	border-radius: 5px;
+	border: 0;
+	padding-left: 15px;
+	padding-top: 10px;
+	background-color: #d6564f;
+	color:#f0d8d9;
+	outline: none;
+}
+.contact-textarea::-webkit-input-placeholder {
+    font-size:12px;
+    color:#f48c8f;
+}
+
+.contact-textarea:-ms-input-placeholder {
+ 	font-size:12px;
+    color:#f48c8f;  
+}
+
+.contact-textarea:-moz-placeholder {
+    font-size:12px;
+    color:#f48c8f;  
+}
+
+.contact-textarea::-moz-placeholder {
+    font-size:12px;
+    color:#f48c8f;    
+}
+.contact-input::-webkit-input-placeholder {
+    font-size:12px;
+    color:#f48c8f;
+}
+
+.contact-input:-ms-input-placeholder {
+ 	font-size:12px;
+    color:#f48c8f;  
+}
+
+.contact-input:-moz-placeholder {
+    font-size:12px;
+    color:#f48c8f;  
+}
+
+.contact-input::-moz-placeholder {
+    font-size:12px;
+    color:#f48c8f;    
+}
+.contact-information{
+	width: 300px;
+	margin-left: 20px;
+	padding-top: 52px;
+	display: inline-block;
+	vertical-align: top;
+}
+.contact-information h2{
+	font-size: 18px;
+	font-weight: normal;
+}
+.contact-information p{
+	font-size: 12px;
+	margin-top: 15px;
+}
+.contact-detail{
+	padding-left: 20px;
+	cursor:pointer;
+}
+.contact-detail:hover{
+	color:#000000;
+}
+.contact-detail.contact-detail--location{
+	background-image: url(images/contact-location.png);
+	background-repeat: no-repeat;
+	background-position: 0px center;
+}
+.contact-detail.contact-detail--location:hover{
+	background-image: url(images/contact-location-overlay.png);
+	background-repeat: no-repeat;
+	background-position: 0px center;
+}
+.contact-detail.contact-detail--phone{
+	background-image: url(images/contact-phone.png);
+	background-repeat: no-repeat;
+	background-position: 0px center;
+}
+.contact-detail.contact-detail--phone:hover{
+	background-image: url(images/contact-phone-overlay.png);
+	background-repeat: no-repeat;
+	background-position: 0px center;
+}
+.contact-detail.contact-detail--mail{
+	background-image: url(images/contact-mail.png);
+	background-repeat: no-repeat;
+	background-position: 0px center;
+}
+.contact-detail.contact-detail--mail:hover{
+	background-image: url(images/contact-mail-overlay.png);
+	background-repeat: no-repeat;
+	background-position: 0px center;
+}
 
 
 footer{
