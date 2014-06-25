@@ -124,10 +124,9 @@ header{
 .services{
 	
 	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-bottom: 125px;
 }
 .title-services{
-	display: inline-block;
 	font-size: 30px;
 	text-align: initial;
 	font-weight: 800;
@@ -412,4 +411,55 @@ footer a:hover img:last-child{
 */
 .slider .site-width{
 	overflow: hidden;
+}
+
+
+/* Pentru portofolio
+*/
+.portofolio-content{
+	background-color: #2d303a;
+	padding-top: 60px;
+	padding-bottom: 70px;
+	margin-bottom: 75px;
+	border-bottom: 5px #323746 solid;
+}
+.portofolio-content .site-width{
+	max-width: 975px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.buttons-projects{
+	line-height: 30px;
+}
+.p-button{
+	height: 23px;
+	outline: none;
+	color: #666d89;
+	border: 1px #666d89 solid;
+	border-radius: 5px;
+	background-color: transparent;
+	font-size: 12px;
+	cursor: pointer;
+}
+.p-button:hover{
+	color: #c5c5c5;
+	border: 1px #c5c5c5 solid;
+}
+.site-width .p-button{
+	margin-right: 10px;
+
+}
+
+.container-projects{
+	display: inline-block;
+	margin-right: -20px;
+	text-align: center;
+}
+.container-projects img{
+
+	width: 220px;
+	height: 187px;
+	overflow: hidden;
+	margin-right: 20px;
+	padding-top: 20px;
 }
