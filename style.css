@@ -1,5 +1,6 @@
 *{
 	margin: 0;
+	box-sizing:border-box;
 }
 /* font-family: 'Lato', sans-serif; */
 .site-width{
@@ -9,19 +10,17 @@
 }
 
 header{
+	position:relative;
+	height:90px;
 	background-color:#2d303a;
 	border-bottom:5px solid #323746;
 	text-align:right;
 }
-header.logo{
+.logo{
 	position:absolute;
 	left:0;
-	top:0;
-}
-.logo h1{
+	bottom:-35px;
 	font-size:25px;
-	font-weight:700;
-	font-family: 'Lato', sans-serif;
 	color:#ffffff;
 	text-transform:uppercase;
 }
@@ -31,10 +30,9 @@ header.logo{
 
 .header-nav a{
 	font-size:12px;
-	font-weight:700;
-	font-family:'Lato', sans-serif;
 	color:#ffffff;
 	text-transform:uppercase;
+	text-decoration:none;
 }
 .header-nav a{
 	color:#f06c64;
