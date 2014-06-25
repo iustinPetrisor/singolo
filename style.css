@@ -70,8 +70,23 @@ header.logo{
 .site-width .arrow--right{
 	right: 0;
 }
+.iphone-vertical{
+	box-shadow: 23px 26px 10px #CE5D4C;
+
+	border-radius: 23px;
+}
 .site-width .iphone-vertical{
 	position: absolute;
 	top: 53px;
 	left: 72px;
+}
+.iphone-horizontal{
+	box-shadow: 23px 26px 10px #CE5D4C;
+	
+	border-radius: 23px;
+}
+.site-width .iphone-horizontal{
+	position: absolute;
+	top: 175px;
+	left: 380px;
 }
