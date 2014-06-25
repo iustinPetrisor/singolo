@@ -176,6 +176,58 @@ header{
 	display: inline-block;
 }
 
+.about-main-content{
+	background-color: #f2f2f2;
+	padding-top:65px;
+	padding-bottom: 70px;
+}
+.about-main-content h1{
+	color:#666d89;
+	font-size: 30px;
+}
+.about-main-content p{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color:#666d89;
+	font-size: 18px;
+}
+
+.about-people-area{
+	display: inline-block;
+}
+.about-people{
+	display: inline-block;
+	width: 300px;
+	margin-right: 20px;
+}
+.about-people h2{
+	color:#666d89;
+}
+.about-people p{
+	color:#767e9e;
+	margin-top: 15px;
+	margin-bottom: 25px;
+	font-size: 12px;
+}
+
+.social-media a{
+	text-decoration: none;
+}
+.social-media img{
+	margin-right: 5px;
+	cursor: pointer;
+}
+.social-media a:hover img:first-child{
+	display: none;
+}
+.social-media a img:last-child{
+	display: none;
+}
+.social-media a:hover img:last-child{
+	display: initial;
+}
+
+
 
 
 footer{
