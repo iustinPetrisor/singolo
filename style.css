@@ -1,5 +1,6 @@
 *{
 	margin: 0;
+	font-family: 'Lato';
 }
 /* font-family: 'Lato', sans-serif; */
 .site-width{
@@ -71,7 +72,7 @@ header.logo{
 	right: 0;
 }
 .iphone-vertical{
-	box-shadow: 23px 26px 10px #CE5D4C;
+	box-shadow: 23px 17px 3px #CE5B57;
 
 	border-radius: 23px;
 }
@@ -81,7 +82,7 @@ header.logo{
 	left: 72px;
 }
 .iphone-horizontal{
-	box-shadow: 23px 26px 10px #CE5D4C;
+	box-shadow: 23px 17px 3px #CE5B57;
 	
 	border-radius: 23px;
 }
@@ -89,4 +90,102 @@ header.logo{
 	position: absolute;
 	top: 175px;
 	left: 380px;
+}
+.services{
+	height: 500px;
+	padding-top: 60px;
+}
+.title-services{
+	display: inline-block;
+	font-size: 30px;
+	
+	font-weight: 800;
+	color: #666d89;
+}
+.description{
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 400;
+	color: #767e9e;
+}
+.site-width .description{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.site-width .container{
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.site-width .container:nth-child(3n){
+	margin-left: 0;
+}
+.container{
+	position: relative;
+	width: 300px;
+	height: 100px;
+	display: inline-block;
+}
+.container--title{
+	font-size: 18px;
+	color: #666d89;
+	font-weight: 800;
+}
+.container .container--title{
+	position: absolute;
+	left: 80px;
+	top: 0px;
+}
+.container-description{
+	font-size: 11px;
+	color: #767e9e;
+	font-weight: 500;
+	word-spacing: 5px;
+	line-height: 19px;
+	width: 220px;
+}
+.container .container-description{
+	
+	position: absolute;
+	top: 30px;
+	left: 80px;
+}
+.container .container-img{
+	display: inline-block;
+}
+
+
+
+footer{
+	height: 75px;
+	text-align: right;
+	background-color: #2d303a;
+}
+.copyright{
+	font-size: 12px;
+	font-weight: 400;
+	color: #666d89;
+}
+.copyright span{
+	font-size: 6px;
+}
+footer .copyright{
+	position: absolute;
+	top: 30px;
+}
+footer img{
+	margin-top: 23px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+footer a{
+	text-decoration: none;
+}
+footer a:hover img:first-child{
+	display: none;
+}
+footer a img:last-child{
+	display: none;
+}
+footer a:hover img:last-child{
+	display: initial;
 }
