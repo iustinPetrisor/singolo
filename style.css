@@ -93,7 +93,7 @@ header{
 	max-height: 80%;
 }
 .wrapper-slider {
-	min-width: 350px;
+	min-width: 300px;
 	background-color: #f06c64;
 	transition: background-color 1s;
 }
@@ -101,7 +101,7 @@ header{
 
 	overflow: hidden;
 	max-width: 960px;
-	min-width: 350px;
+	min-width: 300px;
 
 }
 .slide-content{
