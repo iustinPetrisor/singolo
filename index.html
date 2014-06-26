@@ -24,6 +24,7 @@
 			</div>
 		</header>
 		<div class="wrapper-slider">
+
 			<div class="site-width">
 				<img class="arrow arrow--left" src="images/arrow-left.png" data-dir="prev">
 				<img class="arrow arrow--right" src="images/arrow-right.png" data-dir="next">
@@ -33,6 +34,9 @@
 					</div><!--
 				--><div class="slide-content" data-number="1">
 						<img class="iphone-horizontal" src="images/iphone-horizontal.png">
+					</div><!--
+					--><div class="slide-content" data-number="1">
+						<img  src="images/telefon-smart.png">
 					</div>
 				</div>
 			</div>
@@ -131,9 +135,9 @@
 			</div>		
 	</footer>
 	<script type="text/javascript">
-
+	
 		sliderCarousel = new Slider( $('.wrapper-slider').children('.site-width') , $('.arrow') , 960, 1000, 2000, 1000);
-
+		var imageArray = sliderCarousel._getWidthandHeight();	
   			sliderCarousel.nav_bar.on('click', function() {
   				console.log($(this).data('dir'));
   			var color = getRandColor();	
@@ -158,36 +162,69 @@
 
 		
 
-		width = Math.min(sliderCarousel.pageWidth, 350);
-		var height = width * 9 / 16;
-		// img.css({width:width, height: height});
-		var screenImage = sliderCarousel.slider.children('.slide-content').eq(sliderCarousel.index).children();
+		// width = Math.min(sliderCarousel.pageWidth, 350);
+		// var height = width * 9 / 16;
+		// // img.css({width:width, height: height});
+		// var screenImage = sliderCarousel.slider.children('.slide-content').eq(sliderCarousel.index).children();
 
 		
 
 		// Create new offscreen image to test
-		var theImage = new Image();
-		theImage.src = screenImage.attr("src");
+		// var theImage = new Image();
+		// theImage.src = screenImage.attr("src");
 
-		// Get accurate measurements from that.
-		var imageWidth = theImage.width;
-		console.log(imageWidth);
-		var imageHeight = theImage.height;
+		// // Get accurate measurements from that.
+		// var imageWidth = theImage.width;
+		// console.log(imageWidth);
+		// var imageHeight = theImage.height;
 
-		if( 959 > sliderCarousel.pageWidth){
+		// if( 960 > sliderCarousel.pageWidth){
 
-			width = Math.min(imageHeight, sliderCarousel.pageWidth);
-			var height = width * 9 / 16;
-			sliderCarousel.slider.children('.slide-content').children().css({
-			width: width,
-			height: height
+		// 	width = Math.min(imageHeight, sliderCarousel.pageWidth);
+		// 	var height = width * 9 / 16;
+		// 	sliderCarousel.slider.children('.slide-content').children().css({
+		// 	width: width,
+		// 	height: height
 
-		});
-			
+		// });
+			sliderCarousel.slider.children().children().fitToParent(imageArray);
 		}	
-		
+		jQuery.fn.fitToParent = function(imageArray) {
+			console.log($(this));
+			var index = $(this).parent().index();
+			console.log(index);
+			for ( var i = 0; i < sliderCarousel.numberPages; i ++){
+				console.log(i);
+
+    		(function() {
+	    	var width  = imageArray[ i]['width'];
+	    	console.log(width);
+	    	var height = imageArray[ i]['height'];
+	    	var parentWidth  = sliderCarousel.pageWidth;
+	    	console.log(parentWidth);
+	    	if(width > parentWidth - 100)
+	    	{
+	    		newWidth  = parentWidth - 100;
+	    		newHeight = newWidth/width*height;
+	    	}
+	    	else
+	    	{
+	    		newHeight = height;
+	    		newWidth  = width;
+	    	}
+	    	var kidImg = sliderCarousel.slider.children().eq(i).children();
+	    	kidImg.css({
+	    	             // 'height'     :newHeight   + 'px',
+	    	             'width'      :newWidth    + 'px',
+	    	         	marginBottom: 600/2 - kidImg.height() / 2,
+	    	         	marginTop: 600/2 - kidImg.height() / 2 });
+    		}) ();
+    		}
+
+    		};
 		// img.css({width:width, height: height});
-		}
+    	
+
 
 		resize($('.slide-content'));
 		$(window).on('resize', function () {

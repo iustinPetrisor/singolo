@@ -95,7 +95,23 @@ Slider.prototype._fadeIn = function() {
 
 };
 
-
+Slider.prototype._getWidthandHeight = function() {
+	// body...
+	var myArray = new Array();
+	for(var i = 0; i < this.numberPages - 1 ; i++)
+	{
+		myArray.push({
+			width: this.slider.children().eq(i).children().width(),
+			height: this.slider.children().eq(i).children().height()
+		})
+	}
+	myArray.push({
+		width: this.slider.children().eq(0).children().width(),
+		height: this.slider.children().eq(0).children().height()
+	})
+	console.log(myArray);
+	return myArray;
+};
 
 
 getRandColor = function() {
