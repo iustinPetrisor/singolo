@@ -32,24 +32,24 @@
 					</p>
 				</div>
 				<div class="buttons-projects">
-					<button class="p-button">All</button>
-					<button class="p-button">Web Design</button>
-					<button class="p-button">Graphic Design</button>
-					<button class="p-button">Artwork</button>
+					<button class="p-button" data-type="all">All</button>
+					<button class="p-button" data-type="web-design">Web Design</button>
+					<button class="p-button" data-type="graphic-design">Graphic Design</button>
+					<button class="p-button" data-type="artwork">Artwork</button>
 				</div>
 				<div class="container-projects">
-						<a href="#"><img src="images/image-1.png"></img></a><!--
-					--><a href="#"><img src="images/image-2.png"></img></a><!--
-					--><a href="#"><img src="images/image-3.png"></img></a><!--
-					--><a href="#"><img src="images/image-4.png"></img></a><!--
-					--><a href="#"><img src="images/image-5.png"></img></a><!--
-					--><a href="#"><img src="images/image-6.png"></img></a><!--
-					--><a href="#"><img src="images/image-7.png"></img></a><!--
-					--><a href="#"><img src="images/image-8.png"></img></a><!--
-					--><a href="#"><img src="images/image-3.png"></img></a><!--
-					--><a href="#"><img src="images/image-2.png"></img></a><!--
-					--><a href="#"><img src="images/image-5.png"></img></a><!--
-					--><a href="#"><img src="images/image-4.png"></img></a>
+					<a href="#" data-type='["artwork"]'><img src="images/image-1.png"></img></a><!--
+					--><a href="#" data-type='["web-design"]'><img src="images/image-2.png"></img></a><!--
+					--><a href="#" data-type='["web-design","artwork"]'><img src="images/image-3.png"></img></a><!--
+					--><a href="#" data-type='["graphic-design","artwork"]'><img src="images/image-4.png"></img></a><!--
+					--><a href="#" data-type='["web-design"]'><img src="images/image-5.png"></img></a><!--
+					--><a href="#" data-type='["graphic-design","artwork"]'><img src="images/image-6.png"></img></a><!--
+					--><a href="#" data-type='["web-design","graphic-design"]'><img src="images/image-7.png"></img></a><!--
+					--><a href="#" data-type='["web-design","artwork"]'><img src="images/image-8.png"></img></a><!--
+					--><a href="#" data-type='["graphic-design"]'><img src="images/image-3.png"></img></a><!--
+					--><a href="#" data-type='["web-design","graphic-design"]'><img src="images/image-2.png"></img></a><!--
+					--><a href="#" data-type='["artwork"]'><img src="images/image-5.png"></img></a><!--
+					--><a href="#" data-type='["graphic-design"]'><img src="images/image-4.png"></img></a>
 					
 				</div>							
 			</div>	
@@ -79,12 +79,36 @@
 		</div>
 	</footer>
 	<script type="text/javascript">
+		var buttonProjects = $('button.p-button');
 
-	window.onresize = function(event) {
-    	var pageWidth = $(window).width();
-		if (pageWidth <= ) {};
 
-	};
+		buttonProjects.on('click', function () {
 
+			buttonClick( $('div.container-projects'), $(this).data('type') )
+		} );
+
+		function buttonClick ( container, typeB ) {
+			// body...
+			var type = typeB;
+			console.log(type);
+			var children = container.children();
+			if (type ==='all') {
+				children.css('display', 'inline-block');
+			} else{
+				for (var i = 0; i < children.length; i++) {
+					console.log('works');
+	  				( function( index ) {
+	  					console.log(children.eq(i));
+	  					var typeProject = children.eq(i).data('type');
+	  					console.log(children.eq(i).data('type'));
+						if( typeProject.indexOf(type) >= 0)
+	    					children.eq(i).css('display', 'inline-block');
+	  					else 
+	  						children.eq(i).css('display', 'none');
+	  				})();
+	  			}
+			}
+				
+		};	
 	</script>
 </body>
