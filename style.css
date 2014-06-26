@@ -177,7 +177,8 @@ header{
 .about-main-content{
 	background-color: #f2f2f2;
 	padding-top:65px;
-	padding-bottom: 145px;
+	padding-bottom: 75px;
+	margin-bottom: 70px;
 }
 .about-main-content h1{
 	color:#666d89;
@@ -185,13 +186,16 @@ header{
 }
 .about-main-content p{
 	margin-top: 30px;
-	margin-bottom: 30px;
 	color:#666d89;
 	font-size: 18px;
+}
+.about-main-content img{
+	margin-top: 30px;
 }
 
 .about-people-area{
 	display: inline-block;
+	text-align: center;
 }
 .about-people{
 	display: inline-block;
