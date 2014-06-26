@@ -122,7 +122,23 @@ getRandColor = function() {
 }
 
 
+function toggleMenuBar () {
 
+	if(active) { 
+	$('.header-nav').children('a').removeClass('inactive-nav-bar')
+								.addClass('active-nav-bar');
+	$("header").css('height','auto');
+	$("header").css('text-align','center');
+} else {
+	console.log(active)
+	$('.header-nav').children('a').addClass('inactive-nav-bar')
+								.removeClass('active-nav-bar');
+	$("header").css('height', 90);
+}
+active = !active;
+}
+	    	
+	    								
 
 
 

@@ -51,17 +51,35 @@ header{
 	display: none;
 }
 @media all and (max-width: 600px) {
-	.header-nav{
+	header{
+		height:90px;
+	}
+	.active-nav-bar{
+	display: block;
+	opacity: 1;
+	transition: opacity 1s;
+	line-height: 25px;
+	}
+	.inactive-nav-bar{
+		opacity: 0;
+		display:none;
+		margin-bottom: 10px;
+	}
+	.header-nav a:first-child{
+		margin-top:40px;
+	}
+	.header-nav span{
 		display: none;
 	}
 	.header-menu-bar{
 	display:block;
 	position: absolute;
-	right:0;
+	right:10px;
 	top:25px;
 	cursor: pointer;
 	}
 }
+
 
 .header-nav{
 	padding-top: 35px;
@@ -337,7 +355,7 @@ header{
     color:#f48c8f;    
 }
 .contact-information{
-	width: 33%;
+	width: 37%;
 	min-width: 300px;
 	padding-left: 20px;
 	padding-top: 52px;

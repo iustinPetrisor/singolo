@@ -4,7 +4,8 @@
 	<title>Singolo Contact</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+	</script>
 	<script src="slider.js"></script>
 </head>
 <body>
@@ -12,14 +13,15 @@
 	<header>
 		<div class="site-width">
 			<a href="index.html#"><h1 class = "logo">Singolo<span>*</span></h1></a>
+			<img class = "header-menu-bar" src="images/list-icon.png">
 			<div class = "header-nav">
-				<a href ="index.html#">Home</a>
+				<a class="inactive-nav-bar" href ="index.html#">Home</a>
 				<span>&bull;</span>
-				<a href ="portofolio.html#">Portofolio</a>
+				<a class="inactive-nav-bar" href ="portofolio.html#">Portofolio</a>
 				<span>&bull;</span>
-				<a href ="about.html#">About</a>
+				<a class="inactive-nav-bar" href ="about.html#">About</a>
 				<span>&bull;</span>
-				<a href ="contact.html#">Contact</a>
+				<a class="inactive-nav-bar" href ="contact.html#">Contact</a>
 			</div>
 		</div>
 	</header>
@@ -70,3 +72,10 @@
 				</a>
 		</div>
 	</footer>
+<script type="text/javascript">
+
+		var active = true;
+	    $('.header-menu-bar').on('click', toggleMenuBar);
+</script>	
+</body>
+</html>		

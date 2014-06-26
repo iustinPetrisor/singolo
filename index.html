@@ -14,14 +14,14 @@
 				<a href="index.html#"><h1 class = "logo">Singolo<span>*</span></h1></a>
 				<img class = "header-menu-bar" src="images/list-icon.png">
 				<div class = "header-nav">
-					<a href ="index.html#">Home</a>
+					<a class="inactive-nav-bar" href ="index.html#">Home</a>
 					<span>&bull;</span>
-					<a href ="portofolio.html#">Portofolio</a>
+					<a class="inactive-nav-bar" href ="portofolio.html#">Portofolio</a>
 					<span>&bull;</span>
-					<a href ="about.html#">About</a>
+					<a class="inactive-nav-bar" href ="about.html#">About</a>
 					<span>&bull;</span>
-					<a href ="contact.html#">Contact</a>
-				<div>
+					<a class="inactive-nav-bar" href ="contact.html#">Contact</a>
+				</div>
 			</div>
 		</header>
 		<div class="wrapper-slider">
@@ -136,7 +136,15 @@
 			</div>		
 	</footer>
 	<script type="text/javascript">
-	
+
+		var active = true;
+	    $('.header-menu-bar').on('click', toggleMenuBar);
+
+
+
+
+
+
 		sliderCarousel = new Slider( $('.wrapper-slider').children('.site-width') , $('.arrow') , 960, 1000, 2000, 1000);
 		var imageArray = sliderCarousel._getWidthandHeight();	
   			sliderCarousel.nav_bar.on('click', function() {
