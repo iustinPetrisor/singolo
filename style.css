@@ -75,6 +75,7 @@ header{
 }
 
 .wrapper-slider {
+	min-width: 350px;
 	background-color: #f06c64;
 	transition: background-color 1s;
 }

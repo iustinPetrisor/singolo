@@ -141,16 +141,57 @@
   	 		sliderCarousel.slideTo( $(this).data('dir'));
 
   		})
-  		resize = function( img ) {
-		var widthImage = img.naturalWidth * $(window).width() / 960;
-		width = Math.min(widthImage, 350);
+  // 		resize = function(  ) {
+		// var widthImage =  * $(window).width() / 960;
+		// width = Math.min(widthImage, 350);
+		// var height = width * 9 / 16;
+		// img.css({width:width, height: height});
+		// }
+		resize = function(  ) {
+		sliderCarousel.pageWidth = $('.wrapper-slider .site-width').width();
+		$('.slide-content').css('width',sliderCarousel.pageWidth);
+		sliderCarousel.slider.css('width',sliderCarousel.pageWidth * sliderCarousel.numberPages);
+
+		sliderCarousel.slider.css({
+			marginLeft: - sliderCarousel.index * sliderCarousel.pageWidth
+		});
+
+		
+
+		width = Math.min(sliderCarousel.pageWidth, 350);
 		var height = width * 9 / 16;
-		img.css({width:width, height: height});
+		// img.css({width:width, height: height});
+		var screenImage = sliderCarousel.slider.children('.slide-content').eq(sliderCarousel.index).children();
+
+		
+
+		// Create new offscreen image to test
+		var theImage = new Image();
+		theImage.src = screenImage.attr("src");
+
+		// Get accurate measurements from that.
+		var imageWidth = theImage.width;
+		console.log(imageWidth);
+		var imageHeight = theImage.height;
+
+		if( 959 > sliderCarousel.pageWidth){
+
+			width = Math.min(imageHeight, sliderCarousel.pageWidth);
+			var height = width * 9 / 16;
+			sliderCarousel.slider.children('.slide-content').children().css({
+			width: width,
+			height: height
+
+		});
+			
+		}	
+		
+		// img.css({width:width, height: height});
 		}
 
-		resize($('.slide-content img'));
+		resize($('.slide-content'));
 		$(window).on('resize', function () {
-			resize($('.slide-content img'));
+			resize($('.slide-content'));
 		} )	
 
 	</script>
