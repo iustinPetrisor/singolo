@@ -168,7 +168,7 @@
 		sliderCarousel.slider.css({
 			marginLeft: - sliderCarousel.index * sliderCarousel.pageWidth
 		});
-
+		if($("header").width() > 600 ) outMenuBar();
 		
 
 		// width = Math.min(sliderCarousel.pageWidth, 350);

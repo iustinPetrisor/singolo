@@ -14,7 +14,9 @@ html, body{
 }
 /* font-family: 'Lato', sans-serif; */
 .site-width{
-	max-width: 960px;
+	max-width: 990px;
+	padding-left: 15px;
+	padding-right: 15px;
 	margin: auto;
 	position: relative;
 	min-width: 300px;
@@ -32,10 +34,11 @@ header{
 	background-color:#2d303a;
 	border-bottom:5px solid #323746;
 	text-align:right;
+	transition: height 1s;
+	overflow: hidden;
 }
 .logo{
 	position:absolute;
-	left:0;
 	top:30px;
 	font-size:25px;
 	color:#ffffff;
@@ -53,18 +56,9 @@ header{
 @media all and (max-width: 600px) {
 	header{
 		height:90px;
+		text-align: center;
 	}
-	.active-nav-bar{
-	display: block;
-	opacity: 1;
-	transition: opacity 1s;
-	line-height: 25px;
-	}
-	.inactive-nav-bar{
-		opacity: 0;
-		display:none;
-		margin-bottom: 10px;
-	}
+	
 	.header-nav a:first-child{
 		margin-top:40px;
 	}
@@ -79,10 +73,22 @@ header{
 	cursor: pointer;
 	}
 }
+.active-nav-bar{
+	display: block;
+	opacity: 1;
+	transition: opacity 1s;
+	line-height: 30px;
+	}
+.inactive-nav-bar{
+		opacity: 0;
+		display:none;
+		margin-bottom: 10px;
 
+	}
 
 .header-nav{
 	padding-top: 35px;
+	text-align: right;
 }
 .header-nav a{
 	margin-right: 14px;
@@ -461,11 +467,7 @@ footer a:hover img:last-child{
 	margin-bottom: 75px;
 	border-bottom: 5px #323746 solid;
 }
-.portofolio-content .site-width{
-	max-width: 975px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
+
 .buttons-projects{
 	line-height: 30px;
 }
@@ -495,9 +497,15 @@ footer a:hover img:last-child{
 }
 .container-projects img{
 
+	
+	
+}
+.container-projects a{
+	display: inline-block;
 	width: 220px;
 	height: 187px;
 	overflow: hidden;
 	margin-right: 20px;
 	padding-top: 20px;
+	transition: opacity 2s;
 }

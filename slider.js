@@ -127,14 +127,31 @@ function toggleMenuBar () {
 	if(active) { 
 	$('.header-nav').children('a').removeClass('inactive-nav-bar')
 								.addClass('active-nav-bar');
-	$("header").css('height','auto');
+	var height = $('.header-nav').children('a').length * $('.header-nav').children('a').height();
+	console.log("Acesta este heightu = " + height);
+	$("header").css('height', 90 + height);
 	$("header").css('text-align','center');
 } else {
 	console.log(active)
+
+	
+
+
 	$('.header-nav').children('a').addClass('inactive-nav-bar')
 								.removeClass('active-nav-bar');
 	$("header").css('height', 90);
 }
+active = !active;
+}
+
+function outMenuBar () {
+
+
+
+	$('.header-nav').children('a').addClass('inactive-nav-bar')
+								.removeClass('active-nav-bar');
+	$("header").css('height', 90);
+
 active = !active;
 }
 	    	
