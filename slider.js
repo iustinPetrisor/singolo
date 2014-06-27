@@ -122,32 +122,6 @@ getRandColor = function() {
 }
 
 
-function redimensionHeader () {
-	function headerHeight(){
-		var childHeight = $('.header-nav').children('a').height();
-		var childLength = $('.header-nav').children('a').length ;	
-		var headerHeight = 90 + childHeight * childLength ;
-
-	}
-	if($(window).width() <= 600){
-
-		$('header').removeClass('inactive-header')
-				   .addClass('active-header')
-				   	.css('height' , headerHeight);
-		$('.header-menu-bar').fadeIn();		   	
-
-
-	}else { 
-		$('header').removeClass('active-header')
-				   	.addClass('inactive-header')
-				   	.css('height' , 90);
-		$('.header-menu-bar').fadeOut();	
-		$('.inactive-nav-bar').show();	   	
-	}
-
-
-}
-
 function toggleMenuBar () {
 
 	if(active) { 
@@ -164,16 +138,11 @@ function toggleMenuBar () {
 
 
 	$('.header-nav').children('a').addClass('inactive-nav-bar')
-
-	} else {
-
-		$('.header-nav').children('a').addClass('inactive-nav-bar')
-
 								.removeClass('active-nav-bar');
+	$("header").css('height', 90);
 }
 active = !active;
 }
-
 
 function outMenuBar () {
 
@@ -187,6 +156,8 @@ active = !active;
 }
 	    	
 	    								
+
+
 
 
 

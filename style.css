@@ -28,7 +28,6 @@ html, body{
 	padding-right: 15px;
 	text-align: center;
 }
-
 header{
 	position:relative;
 	height:90px;
@@ -37,9 +36,9 @@ header{
 	text-align:right;
 	transition: height 1s;
 	overflow: hidden;
+}
 .logo{
 	position:absolute;
-	left:0;
 	top:30px;
 	font-size:25px;
 	color:#ffffff;
@@ -49,40 +48,23 @@ header{
 .logo span{
 	color:#f06c64;
 }
-header{
-	text-align: right;
-	height: 90px;
-}
+
 
 .header-menu-bar{
-	display:none;
-	position: absolute;
-	right:10px;
-	top:25px;
-	cursor: pointer;
-
+	display: none;
 }
-
-
-.active-nav-bar{
-	display: block;
-	opacity: 1;
-	transition: opacity 1s;
-	line-height: 25px;
+@media all and (max-width: 600px) {
+	header{
+		height:90px;
+		text-align: center;
 	}
-	.inactive-nav-bar{
-		opacity: 0;
-		display:none;
-		margin-bottom: 10px;
-	}
-.header-nav a:first-child{
-
+	
+	.header-nav a:first-child{
 		margin-top:40px;
 	}
 	.header-nav span{
 		display: none;
 	}
-
 	.header-menu-bar{
 	display:block;
 	position: absolute;
@@ -103,7 +85,6 @@ header{
 		margin-bottom: 10px;
 
 	}
-
 
 .header-nav{
 	padding-top: 35px;
@@ -128,84 +109,6 @@ header{
 	color:#494e62;
 }
 
-/*@media all and (min-width: 601px) {
-	header {
-		text-align:right;
-	}
-	.logo{
-	position:absolute;
-	left:0px;
-	top:30px;
-	}
-	.header-nav{
-	padding-top: 35px;
-}*/
-}
-
-/*@media all and (max-width: 600px) {
-	header{
-		height:90px;
-		text-align: center;
-	}
-	.logo{
-	position:absolute;
-	left:10px;
-	top:30px;
-	}
-	.active-nav-bar{
-	display: block;
-	opacity: 1;
-	transition: opacity 1s;
-	line-height: 25px;
-	}
-	.inactive-nav-bar{
-		opacity: 0;
-		display:none;
-		margin-bottom: 10px;
-	}
-	.header-nav a:first-child{
-		margin-top:40px;
-	}
-	.header-nav span{
-		display: none;
-	}
-	.header-menu-bar{
-	display:block;
-	position: absolute;
-	right:10px;
-	top:25px;
-	cursor: pointer;
-	}
-}*/
-/**/
-
-/*.active-nav-bar{
-display: block;
-opacity: 1;
-transition: opacity 1s;
-line-height: 25px;
-}
-.inactive-nav-bar{
-	opacity: 0;
-	display:none;
-	margin-bottom: 10px;
-}
-.header-nav a:first-child{
-	margin-top:40px;
-}
-.header-nav span{
-	display: none;
-}
-.header-menu-bar{
-
-	display:block;
-	position: absolute;
-	right:10px;
-	top:25px;
-	cursor: pointer;
-}*/
-
-/**/
 .slider {
 	height: 600px;
 	text-align: center;
@@ -594,9 +497,15 @@ footer a:hover img:last-child{
 }
 .container-projects img{
 
+	
+	
+}
+.container-projects a{
+	display: inline-block;
 	width: 220px;
 	height: 187px;
 	overflow: hidden;
 	margin-right: 20px;
 	padding-top: 20px;
+	transition: opacity 2s;
 }
