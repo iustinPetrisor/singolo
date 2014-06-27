@@ -31,6 +31,7 @@ html, body{
 
 header{
 	position:relative;
+	height:90px;
 	background-color:#2d303a;
 	border-bottom:5px solid #323746;
 	text-align:right;
@@ -38,6 +39,7 @@ header{
 	overflow: hidden;
 .logo{
 	position:absolute;
+	left:0;
 	top:30px;
 	font-size:25px;
 	color:#ffffff;
@@ -60,14 +62,6 @@ header{
 	cursor: pointer;
 
 }
-
-@media all and (max-width: 600px) {
-	header{
-		height:90px;
-		text-align: center;
-	}
-	
-	.header-nav a:first-child{
 
 
 .active-nav-bar{
@@ -138,10 +132,19 @@ header{
 	header {
 		text-align:right;
 	}
+	.logo{
+	position:absolute;
+	left:0px;
+	top:30px;
+	}
+	.header-nav{
+	padding-top: 35px;
 }*/
+}
 
 /*@media all and (max-width: 600px) {
 	header{
+		height:90px;
 		text-align: center;
 	}
 	.logo{
@@ -591,15 +594,9 @@ footer a:hover img:last-child{
 }
 .container-projects img{
 
-	
-	
-}
-.container-projects a{
-	display: inline-block;
 	width: 220px;
 	height: 187px;
 	overflow: hidden;
 	margin-right: 20px;
 	padding-top: 20px;
-	transition: opacity 2s;
 }
